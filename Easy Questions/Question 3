@@ -1,0 +1,22 @@
+Q: Sum of two lowest positive integers
+
+Solution: 
+
+def sum_two_smallest_numbers(numbers):
+    #your code here
+    
+    arr = []
+    import sys
+    first = 2147483647 
+    second = 2147483647 
+    
+    
+    for x in numbers: 
+        if first > int(x):
+            second = first 
+            first = x 
+        elif second > x:
+            second = x 
+            
+    return first+second            
+    
