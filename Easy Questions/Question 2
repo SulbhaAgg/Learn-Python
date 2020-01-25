@@ -1,0 +1,21 @@
+Q: Tribonacci Sequence
+
+Solution: 
+def tribonacci(signature, n):
+    #your code here
+  num = []
+  
+  if n <= 3 :
+      for x in range(n): 
+          num.append(signature[x]) ''
+      return num 
+  
+  for x in signature:
+      num.append(x)
+ 
+  for x in range(3,n):
+      num.append(num[x-1]+num[x-2]+num[x-3] )
+      
+  return num
+  
+  '''This is nost generic Solution that came into my mind at first place. There are easier solutions then this, try it out'''
